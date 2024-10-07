@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %} Home {% endblock %}
+{% block header %} <h1>Get the best Price of any PC you want</h1> {% endblock %}
+<br><br><br>
+{% block content %}
+<!---Adding SearchForm Fields to the html code-->
+<div class="box">
+    <form action="/" method="POST">
+        {{ form.hidden_tag() }}
+        {{ wtf.form_field(form.product_name) }}
+        <button type="submit">Search</button>
+    </form>
+</div>
+{% endblock %}
